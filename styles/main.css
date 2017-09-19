@@ -76,15 +76,13 @@ a:hover {
 	width: 100%;
 	margin: auto;
 	display: grid;
-	grid-template-columns: repeat(2, minmax(100px, 1fr));
+	grid-template-columns: minmax(100px, 1fr);
 }
 
 
 /* top-nav */
 
 .top-nav {
-	grid-column: 1 / -1;
-	grid-row: 1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -93,34 +91,68 @@ a:hover {
 }
 
 .top-rule {
-	grid-column: 1 / -1;
+	grid-column: 1;
 }
 
 
 /* hero */
 
-.hero-scroll {
-	grid-column: 1 / -1;
-	justify-self: center;
+.hero-container {
+	grid-column: 1;
 }
 
-.hero-head {
+.heroPin {
+	height: 100vh;
+}
+
+.heroHead {
 	padding: 120px 0;
 }
 
-.hero-bar {
-	margin: 0 30px 120px 30px;
+.heroBar {
+	margin: 0 30px 0px 30px;
+	text-align: center;
 }
 
-.hero-bar img {
-	max-width: 100%;
+.heroBar img {
+    max-width: 100%;
+}
+
+.heroLaptop {
+	text-align: center;
+}
+
+.heroLaptop img {
+    max-width: 100%;
+}
+
+.heroNotebook {
+	margin: 0 30px 0px 30px;
+	text-align: left;
+}
+
+.heroNotebook img {
+    max-width: 100%;
+}
+
+.heroGlasses {
+	margin: 0 30px 0px 30px;
+	text-align: right;
+}
+
+.heroGlasses img {
+    max-width: 100%;
+}
+
+.heroTabletop img {
+    width: 100%;
 }
 
 
 /* intro */
 
 .intro {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -143,7 +175,7 @@ a:hover {
 /* nutrition */
 
 .nutri-grid {
-	grid-column: 1 / 3;
+	grid-column: 1;
 	display: grid;
 	max-width: 1000px;
 	grid-template-columns: repeat(3, 1fr);
@@ -260,7 +292,7 @@ a:hover {
 /* testimonials */
 
 .testimonial-logos {
-	grid-column: 1 / 3;
+	grid-column: 1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -271,7 +303,7 @@ a:hover {
 }
 
 .testimonial-quotes {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	text-align: center;
 	height: 150px;
 	background: rgba(243,156,107,0.125);
@@ -283,7 +315,7 @@ a:hover {
 /* icons */
 
 .icons {
-	grid-column: 1 / -1;
+	grid-column: 1;
 }
 .icons-grid {
 	display: grid;
@@ -342,7 +374,7 @@ a:hover {
 /* buzz */
 
 .buzz {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -366,18 +398,17 @@ a:hover {
 }
 
 
-
 /* subscribe */
 
 .subscribe-head {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	text-align: center;
 	margin: 0 15px;
 	margin-top: 120px;
 }
 
 .subscribe-form-btn {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	text-align: center;
 }
 
@@ -423,7 +454,7 @@ a:hover {
 /* product shots */
 
 .small-bars {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
@@ -440,19 +471,19 @@ a:hover {
 /* share */
 
 .share-head {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	text-align: center;
 	margin: 240px 30px 0 30px;
 }
 
 .share-subhead {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	text-align: center;
 	margin: 30px;
 }
 
 .share-pix {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	grid-gap: 15px;
@@ -467,7 +498,7 @@ a:hover {
 /* endblock */
 
 .endblock {
-	grid-column: 1 / 3;
+	grid-column: 1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -501,7 +532,7 @@ a:hover {
 		display: block;
 	}
 	.nutri-number-grid {
-		grid-column: 1 / 3;
+		grid-column: 1;
 		justify-self: center;
 		display: grid;
 		grid-template-columns: repeat(2, max-content);
