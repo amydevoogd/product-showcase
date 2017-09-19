@@ -1,20 +1,26 @@
 // init ScrollMagic Controller
 var controller = new ScrollMagic.Controller();
 
+// Scene handler for tweening bar
+var barTween = new ScrollMagic.Scene({
+  triggerElement: ".heroLaptop",
+})
+.setTween(".heroBar", 2, {scale: 0.45, ease:Bounce.easeOut}) // trigger a TweenMax.to tween
+.addIndicators({name: "scale bar"})
 
-// Scene Handlers for layers
+
+// Scene handlers for layers
 var pinHeroElements = new ScrollMagic.Scene({
   triggerElement: ".heroPin", // point of execution
   triggerHook: 0, // don't trigger until #heroHead hits the top of the viewport
   reverse: true // allows the effect to trigger when scrolled in the reverse direction
 })
-.setPin(".heroPin") // the element we want to pin
+.setPin(".heroPin", {pushfollowers: false}) // the element we want to pin
 .addIndicators({
   name: "pin hero elements",
   colorTrigger: "green",
   colorStart: "green"
 })
-
 
 var pinLaptop = new ScrollMagic.Scene({
   triggerElement: ".heroLaptop",
@@ -70,21 +76,10 @@ var pinTabletop = new ScrollMagic.Scene({
 
 // Add Scenes to ScrollMagic Controller
 controller.addScene([
+  barTween,
   pinHeroElements,
   pinLaptop,
   pinNotebook,
   pinGlasses,
   pinTabletop
 ]);
-
-/* Scene Handlers for animation
-var barTween = new ScrollMagic.Scene({
-  triggerElement: ".heroTabletop"
-})
-.setTween(".heroBar", {scale: .5})
-.addIndicators({
-  name: "tween bar",
-  colorTrigger: "magenta",
-  colorStart: "magenta"
-})
-*/
