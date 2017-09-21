@@ -86,12 +86,14 @@ a:hover {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin: 15px 15px 0 15px;
-
+	align-self: center;
+	margin: 0 15px;
 }
 
-.top-rule {
-	grid-column: 1;
+.horizontal-line {
+	border: 0;
+	width: 100%;
+	border-bottom: 1px solid #c1c3c3;
 }
 
 
@@ -416,6 +418,10 @@ a:hover {
     border: 1px solid #313737;
     padding-left: 15px;
     position: relative;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	color: #313737;
+    font-size: 16px;
+	font-weight: 100; 
 }
 
 .btn {
@@ -429,6 +435,10 @@ a:hover {
     background-color: #313737;
     color: #FFFFFF;
     cursor: pointer;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
 }
 
 
@@ -536,6 +546,9 @@ a:hover {
 }
 
 @media(min-width: 768px) {
+	.hero-laptop {
+		position: absolute;
+	}
 	.intro {
 		grid-column: 1 / -1;
 		display: grid;
@@ -581,8 +594,5 @@ a:hover {
 	}
 	.share-head {
 		margin-top: 120px;
-	}
-	.hero-laptop {
-	position: absolute;
 	}
 }

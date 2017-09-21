@@ -6,17 +6,17 @@ var controller = new ScrollMagic.Controller();
 var pinHeroWrapper = new ScrollMagic.Scene({
   triggerElement: ".hero", // point of execution
   triggerHook: 0, // don't trigger until #heroHead hits the top of the viewport
-  duration: 500,
+  duration: 400,
   reverse: true // allows the effect to trigger when scrolled in the reverse direction
 })
 .setPin(".hero-wrapper") // the element we want to pin
 // enable for work in progress
-/*.addIndicators({
+.addIndicators({
   name: "pin hero",
   colorTrigger: "magenta",
   colorStart: "magenta"
 })
-*/
+
 .addTo(controller);
 
 
