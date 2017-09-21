@@ -9,13 +9,15 @@ var pinHeroWrapper = new ScrollMagic.Scene({
   duration: 400,
   reverse: true // allows the effect to trigger when scrolled in the reverse direction
 })
-.setPin(".hero-wrapper") // the element we want to pin
+.setPin(".hero-wrapper",  {pushfollowers: false}) // the element we want to pin
 // enable for work in progress
+/*
 .addIndicators({
   name: "pin hero",
   colorTrigger: "magenta",
   colorStart: "magenta"
 })
+*/
 
 .addTo(controller);
 
@@ -43,8 +45,6 @@ controller.scrollPos(function () {
 });
 
 // change testimonial when logo is clicked
-$(document).ready(function(){
-  
   $("logo01").click(function() {
     $("testimonial-quotes").html("Engadget likes it");
   });
