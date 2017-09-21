@@ -83,6 +83,7 @@ a:hover {
 /* top-nav */
 
 .top-nav {
+	grid-column: 1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -102,7 +103,7 @@ a:hover {
 
 .hero {
 	grid-column: 1;
-	text-align: center;
+	justify-self: center;
 }
 
 .hero-head {
