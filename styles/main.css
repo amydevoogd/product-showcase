@@ -76,32 +76,33 @@ a:hover {
 	width: 100%;
 	margin: auto;
 	display: grid;
-	grid-template-columns: repeat(2, minmax(100px, 1fr));
+	grid-template-columns: minmax(100px, 1fr);
 }
 
 
 /* top-nav */
 
 .top-nav {
-	grid-column: 1 / -1;
-	grid-row: 1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin: 15px 15px 0 15px;
+	align-self: center;
+	margin: 0 15px;
 
 }
 
-.top-rule {
-	grid-column: 1 / -1;
+.horizontal-line {
+	border: 0;
+	width: 100%;
+	border-bottom: 1px solid #c1c3c3;
 }
 
 
 /* hero */
 
-.hero-scroll {
-	grid-column: 1 / -1;
-	justify-self: center;
+.hero {
+	grid-column: 1;
+	text-align: center;
 }
 
 .hero-head {
@@ -120,13 +121,12 @@ a:hover {
 /* intro */
 
 .intro {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	background: rgba(243,156,107,0.125);
-	margin: 120px 0 120px 0;
 }
 
 .intro-copy {
@@ -143,7 +143,7 @@ a:hover {
 /* nutrition */
 
 .nutri-grid {
-	grid-column: 1 / 3;
+	grid-column: 1;
 	display: grid;
 	max-width: 1000px;
 	grid-template-columns: repeat(3, 1fr);
@@ -175,6 +175,8 @@ a:hover {
 	padding: 15px;
 }
 
+/* nutrition badges */
+
 .nutri-badges {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -186,6 +188,8 @@ a:hover {
 .nutri-badges img {
 	width: 100%;
 }
+
+/* nutrition number grid */
 
 .nutri-number-grid {
 	grid-column: 1 / -1;
@@ -260,7 +264,7 @@ a:hover {
 /* testimonials */
 
 .testimonial-logos {
-	grid-column: 1 / 3;
+	grid-column: 1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -268,10 +272,11 @@ a:hover {
 	background: rgba(243,156,107,0.125);
 	margin-top: 120px;
 	height: 250px;
+	padding-top: 30px;
 }
 
 .testimonial-quotes {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	text-align: center;
 	height: 150px;
 	background: rgba(243,156,107,0.125);
@@ -283,7 +288,7 @@ a:hover {
 /* icons */
 
 .icons {
-	grid-column: 1 / -1;
+	grid-column: 1;
 }
 .icons-grid {
 	display: grid;
@@ -342,13 +347,13 @@ a:hover {
 /* buzz */
 
 .buzz {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	background: rgba(243,156,107,0.125);
-	margin: 120px 0 240px 0;
+	margin-top: 120px;
 }
 
 .buzz-copy {
@@ -366,18 +371,17 @@ a:hover {
 }
 
 
-
 /* subscribe */
 
 .subscribe-head {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	text-align: center;
 	margin: 0 15px;
 	margin-top: 120px;
 }
 
 .subscribe-form-btn {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	text-align: center;
 }
 
@@ -404,6 +408,10 @@ a:hover {
     border: 1px solid #313737;
     padding-left: 15px;
     position: relative;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	color: #313737;
+    font-size: 16px;
+	font-weight: 100; 
 }
 
 .btn {
@@ -417,18 +425,23 @@ a:hover {
     background-color: #313737;
     color: #FFFFFF;
     cursor: pointer;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
 }
 
 
 /* product shots */
 
 .small-bars {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
 	flex-wrap: wrap;
 	margin: 15px;
+	margin-bottom: 120px;
 }
 
 .small-bars img {
@@ -440,19 +453,19 @@ a:hover {
 /* share */
 
 .share-head {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	text-align: center;
-	margin: 240px 30px 0 30px;
+	margin: 0px 30px;
 }
 
 .share-subhead {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	text-align: center;
 	margin: 30px;
 }
 
 .share-pix {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	grid-gap: 15px;
@@ -467,7 +480,7 @@ a:hover {
 /* endblock */
 
 .endblock {
-	grid-column: 1 / 3;
+	grid-column: 1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -475,7 +488,7 @@ a:hover {
 	height: 240px;
 	align-items: center;
 	color: #FFFFFF;
-	margin-top: 240px;
+	margin-top: 120px;
 }
 
 .endblock a {
@@ -501,7 +514,7 @@ a:hover {
 		display: block;
 	}
 	.nutri-number-grid {
-		grid-column: 1 / 3;
+		grid-column: 1;
 		justify-self: center;
 		display: grid;
 		grid-template-columns: repeat(2, max-content);
@@ -529,7 +542,7 @@ a:hover {
 		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 		justify-items: center;
 		background: rgba(243,156,107,0.125);
-		margin: 120px 0 120px 0;
+		margin-top: 120px;
 		height: 400px;
 	}
 	
@@ -562,5 +575,11 @@ a:hover {
 	.buzz img {
 		height: 100%;
     	object-fit: cover;
+	}
+	.endblock {
+		margin-top: 240px;
+	}
+	.share-head {
+		margin-top: 120px;
 	}
 }
