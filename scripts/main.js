@@ -44,6 +44,7 @@ controller.scrollPos(function () {
   }
 });
 
+/*
 // change testimonial when logo is clicked
   $("logo01").click(function() {
     $("testimonial-quotes").html("Engadget likes it");
@@ -58,3 +59,4 @@ controller.scrollPos(function () {
   });
 
 });
+*/
