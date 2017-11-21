@@ -10,8 +10,9 @@ var pinHeroWrapper = new ScrollMagic.Scene({
   reverse: true // allows the effect to trigger when scrolled in the reverse direction
 })
 .setPin(".hero-wrapper",  {pushfollowers: false}) // the element we want to pin
-// enable for work in progress
+
 /*
+// enable for work in progress
 .addIndicators({
   name: "pin hero",
   colorTrigger: "magenta",
@@ -25,17 +26,19 @@ var pinHeroWrapper = new ScrollMagic.Scene({
 // TweenMax.for tweening bar from small to large
 var tween = TweenMax.from('.hero-bar', 1, {scale: .45});
 
-
 // Scene handler for tweening bar
 var barTween = new ScrollMagic.Scene({
   duration: 800
 })
 .setTween(tween) // trigger above TweenMax.for tween
+
 //.addIndicators({name: "scale bar"})
+
 .addTo(controller);
 
 
 // disable Scrollmagic at smaller sizes
+
 controller.scrollPos(function () {
   if(window.innerWidth >= 768){
     return window.pageYOffset;
@@ -45,18 +48,21 @@ controller.scrollPos(function () {
 });
 
 /*
-// change testimonial when logo is clicked
-  $("logo01").click(function() {
-    $("testimonial-quotes").html("Engadget likes it");
-  });
 
-  $("logo02").click(function() {
-    $("testimonial-quotes").html("Ars Technica likes it");
-  });
+// disable Tweenmax at smaller sizes
 
-  $("logo03").click(function() {
-    $("testimonial-quotes").html("Medium likes it");
-  });
+if ($( window ).width() <= 768) {
+  TweenMax.killAll();
+  slideSmall.pause(0);
+}
 
-});
+function tween() {
+  if ($(window).width() > 768) {
+    TweenMax.play(0);
+}   else {
+      TweenMax.pause(0);
+    }
+}
+
 */
+

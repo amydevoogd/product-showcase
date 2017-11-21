@@ -99,33 +99,20 @@ a:hover {
 
 /* hero */
 
-.hero {
-	grid-column: 1;
-	text-align: center;
-}
-
 .hero-laptop {
-	padding: 60px;
+	display: none;
+}
+
+.hero {
+	justify-self: stretch;
+}
+
+.hero-bar {
 	width: 100%;
-	z-index: 1;
-}
-
-.hero-wrapper {
-	position: relative;
-	z-index: 2;
-}
-
-.hero-head {
-	padding-top: 140px;
 }
 
 .hero-bar img {
-    max-width: 100%;
-    padding: 0 30px 0 30px;
-}
-
-.hero-laptop img {
-	max-width: 100%;
+	width: 100%;
 }
 
 
@@ -547,9 +534,41 @@ a:hover {
 }
 
 @media(min-width: 768px) {
+
 	.hero-laptop {
+		display: block;
 		position: absolute;
 	}
+
+	.hero {
+		grid-column: 1;
+		text-align: center;
+	}
+
+	.hero-laptop {
+		padding: 60px;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.hero-wrapper {
+		position: relative;
+		z-index: 2;
+	}
+
+	.hero-head {
+		padding-top: 140px;
+	}
+
+	.hero-bar img {
+	    max-width: 100%;
+	    padding: 0 30px 0 30px;
+	}
+
+	.hero-laptop img {
+		max-width: 100%;
+	}
+
 	.intro {
 		grid-column: 1 / -1;
 		display: grid;
